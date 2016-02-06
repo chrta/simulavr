@@ -20,4 +20,8 @@ script:
   - make -C timertest timertest
   - make -C verilog verilogtest
   - make -C tcl docheck
-
+  - cd ../examples
+  - make -C python run_example
+  - make -C verilog example
+  - make -C atmega128_timer do
+  - echo The other examples open a gui and cannot be executed on a headless system
