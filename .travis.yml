@@ -1,0 +1,15 @@
+language: cpp
+
+before_install:
+  - sudo apt-get update -qq
+
+install:
+  - sudo apt-get install -qq gcc-avr binutils-avr avr-libc
+
+script:
+  - ./bootstrap
+  - ./configure
+  - make
+  - cd regress && ./regress.py
+  - cd regress && ./regress.py -d atmega2560
+  
