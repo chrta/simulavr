@@ -10,6 +10,14 @@ script:
   - ./bootstrap
   - ./configure
   - make
-  - cd regress && ./regress.py
-  - cd regress && ./regress.py -d atmega2560
-  
+  - cd regress
+  - ./regress.py
+  - ./regress.py -d atmega2560
+  - make -C gtest check-local
+  - make -C avrtest avrtest
+  - make -C extinttest extinttest
+  - make -C modtest modtest
+  - make -C timertest timertest
+  - make -C verilog verilogtest
+  - make -C tcl docheck
+
