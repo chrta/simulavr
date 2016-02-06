@@ -4,7 +4,7 @@ before_install:
   - sudo apt-get update -qq
 
 install:
-  - sudo apt-get install -qq gcc-avr binutils-avr avr-libc swig
+  - sudo apt-get install -qq gcc-avr binutils-avr avr-libc swig texinfo
 
 script:
   - ./bootstrap
