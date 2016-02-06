@@ -13,16 +13,14 @@ class XPin(pysimulavr.Pin):
     
 def printPin(pid, pin, withID = False):
   if withID:
-    print "  pin %d: id=%s, (char)pin='%s', (bool)pin=%s, pin.GetAnalogValue(vcc)=%0.2fV" % (pid,
-                                                                                             id(pin),
-                                                                                             pin.toChar(),
-                                                                                             pin.toBool(),
-                                                                                             pin.GetAnalogValue(vcc))
+    print "  pin %d: id=%s, (char)pin='%s', pin.GetAnalogValue(vcc)=%0.2fV" % (pid,
+                                                                               id(pin),
+                                                                               pin.toChar(),
+                                                                               pin.GetAnalogValue(vcc))
   else:
-    print "  pin %d: (char)pin='%s', (bool)pin=%s, pin.GetAnalogValue(vcc)=%0.2fV" % (pid,
-                                                                                      pin.toChar(),
-                                                                                      pin.toBool(),
-                                                                                      pin.GetAnalogValue(vcc))
+    print "  pin %d: (char)pin='%s', pin.GetAnalogValue(vcc)=%0.2fV" % (pid,
+                                                                        pin.toChar(),
+                                                                        pin.GetAnalogValue(vcc))
 
 if __name__ == "__main__":
 
