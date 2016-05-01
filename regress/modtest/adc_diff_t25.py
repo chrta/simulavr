@@ -46,7 +46,7 @@ class TestCase(SimTestCase):
     else:
       rng = 512
     v = self.sim.getWordByName(self.dev, "adc_value")
-    e = int(((pValue - nValue) / refValue) * rng) & 0x3ff
+    e = int(round(((pValue - nValue) / refValue) * rng)) & 0x3ff
     self.assertEqual(v, e, "expected adc value is 0x%x, got 0x%x" % (e, v))
 
   def test_00(self):
